@@ -5,7 +5,7 @@ lua54 'yes'
 
 author 'HenkW'
 description 'Advanced Garage system for ESX & QBCORE'
-version '1.0.5'
+version '1.0.6'
 
 files {
     'locales/*.json'
