@@ -1,11 +1,12 @@
 local curVersion = GetResourceMetadata(GetCurrentResourceName(), "version")
 local resourceName = "hw_garage"
 
+if Crafting.checkForUpdates then
     CreateThread(function()
         if GetCurrentResourceName() ~= "hw_garage" then
             resourceName = "hw_garage (" .. GetCurrentResourceName() .. ")"
         end
-    end)  
+    end)
 
     CreateThread(function()
         while true do
@@ -56,7 +57,7 @@ local resourceName = "hw_garage"
 
         return repoVersion, repoURL, repoBody
     end
-    
+end
 
 AddEventHandler('onResourceStart', function(resourceName)
     if (GetCurrentResourceName() ~= resourceName) then
@@ -98,6 +99,7 @@ AddEventHandler('onResourceStart', function(resourceName)
     if (GetCurrentResourceName() ~= resourceName) then
         return
     end
+
 
     local embed = {
         title = "Resource Started",

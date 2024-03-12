@@ -2,10 +2,13 @@ Config = {}
 Config.MaxDistance = 10.0 -- Max interact distance
 Config.UseKeySystem = false -- Implemented only for qb-vehiclekeys, you can implement it for other systems in cl_edit.lua
 Config.SpawnpointCheck = false -- Checks if the vehicle spawnpoint is empty before spawning it.
+Config.checkForUpdates = true -- Recommended to leave on "true"
+Config.Debug = true -- Comming soon..............
 
 -- The global setting for target however you can still combine target/TextUI by omitting Position or PedPosition in garage/impound data
 Config.Target = false
 
+-- DONT EDIT BELOW UNLESS U KNOW WHAT U ARE DOING!!!!!
 ---@alias VehicleType string
 
 ---@class BlipData
@@ -15,6 +18,7 @@ Config.Target = false
 ---@field Color integer
 
 ---@type table<VehicleType, table<'Garage' | 'Impound', BlipData>>
+
 Config.Blips = {
     ['car'] = {
         Garage = {
@@ -60,6 +64,7 @@ Config.Blips = {
     },
 }
 
+-- DONT EDIT BELOW UNLESS U KNOW WHAT U ARE DOING!!!!!
 ---@class LocationData
 ---@field Visible boolean Blip visibility on map.
 ---@field Type VehicleType The vehicle type.
@@ -73,6 +78,8 @@ Config.Blips = {
 ---@field Interior string? The interior name.
 
 ---@type GarageData[]
+
+
 Config.Garages = {
     {
         Visible = true,
@@ -296,9 +303,11 @@ Config.GarageInteriors = {
 
 Config.ImpoundPrice = 1000 --Price to return your vehicle.
 
+-- DONT EDIT BELOW UNLESS U KNOW WHAT U ARE DOING!!!!!
 ---@class ImpoundData : LocationData
 
 ---@type ImpoundData[]
+
 Config.Impounds = {
     {
         Visible = true,
