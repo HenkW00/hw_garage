@@ -34,7 +34,7 @@ function Utils.logToDiscord(source, xPlayer, message)
             ["description"] = message,
             ["footer"] = {
                 ["text"] = os.date('%H:%M - %d. %m. %Y', os.time()),
-                ["icon_url"] = 'https://cdn.discordapp.com/attachments/793081015433560075/1048643072952647700/lunar.png',
+                ["icon_url"] = '',
             },
         }
     }
