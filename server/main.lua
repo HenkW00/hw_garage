@@ -140,6 +140,9 @@ lib.callback.register('hw_garage:takeOutVehicle', function(source, index, plate,
         local netId, owner = NetworkGetNetworkIdFromEntity(entity), NetworkGetEntityOwner(entity)
         
         TriggerClientEvent('hw_garage:setVehicleProperties', owner, netId, props)
+        if Config.Debug then
+            print("^0[^1DEBUG^0] ^5Player: ^3" .. owner .. "^5 took out a impounded vehicle with plate: ^3" .. plate)
+        end
 
         activeVehicles[plate] = entity
 
@@ -170,6 +173,9 @@ lib.callback.register('hw_garage:saveVehicle', function(source, props, netId)
             
             if DoesEntityExist(vehicle) then
                 DeleteEntity(vehicle)
+            end
+            if Config.Debug then
+                print("^0[^1DEBUG^0] ^5Player: ^3" .. source .. "^5 saved a vehicle with plate: ^3" .. props.plate)
             end
         end)
 
