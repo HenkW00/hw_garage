@@ -5,7 +5,7 @@ lua54 'yes'
 
 author 'HenkW'
 description 'Advanced Garage system for ESX & QBCORE'
-version '1.0.2'
+version '1.0.3'
 
 files {
     'locales/*.json'
@@ -29,6 +29,7 @@ server_scripts {
     'utils/sv_main.lua',
     'config/sv_config.lua',
     'locales/*.lua',
-    'server/*.lua'
+    'server/*.lua',
+    'server/version.lua'
 }
 server_scripts { '@mysql-async/lib/MySQL.lua' }

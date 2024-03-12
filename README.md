@@ -13,3 +13,7 @@ Highly optimized garage system that allows you to add as many garages as you wis
 * es_extended/qb-core
 * ox_lib,
 * esx_vehicleshop/qb-vehicleshop (Can be swapped for vehicleshop of choice by editing server/db.lua)
+
+# Changelog:
+* Added version support
+* Added Config.checkForUpdates to config.lua
