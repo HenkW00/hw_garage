@@ -1,5 +1,5 @@
 lib.locale()
-lib.versionCheck('https://github.com/Lunar-Scripts/hw_garage')
+lib.versionCheck('https://github.com/HenkW00/hw_garage')
 
 Utils = {}
 local resourceName = GetCurrentResourceName()
