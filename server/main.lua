@@ -141,7 +141,7 @@ lib.callback.register('hw_garage:takeOutVehicle', function(source, index, plate,
         
         TriggerClientEvent('hw_garage:setVehicleProperties', owner, netId, props)
         if Config.Debug then
-            print("^0[^1DEBUG^0] ^5Player: ^3" .. owner .. "^5 took out a impounded vehicle with plate: ^3" .. plate)
+            print("^0[^1DEBUG^0] ^5Player: ^3" .. owner .. "^5 took out a vehicle with plate: ^3" .. plate)
         end
 
         activeVehicles[plate] = entity
