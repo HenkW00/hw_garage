@@ -11,9 +11,6 @@ lib.callback.register('hw_garage:enterInterior', function(source, type)
 
     SetPlayerRoutingBucket(source, bucketId)
     SetRoutingBucketPopulationEnabled(bucketId, false)
-    if Config.Debug then
-        print("^0[^1DEBUG^0] ^5Player: ^3" .. source .. "^5 entered the garage exterior^0")
-    end
 
     local vehicles = MySQL.query.await(Queries.getStoredGarage, { player:getIdentifier(), type })
     return vehicles
@@ -24,9 +21,6 @@ RegisterNetEvent('hw_garage:exitInterior', function()
 
     if inside[source] then
         SetPlayerRoutingBucket(source, 0)
-        if Config.Debug then
-            print("^0[^1DEBUG^0] ^5Player: ^3" .. source .. "^5 left the garage exterior^0")
-        end
         inside[source] = false
     end
 end)

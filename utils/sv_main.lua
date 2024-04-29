@@ -1,5 +1,5 @@
 lib.locale()
-lib.versionCheck('https://github.com/HenkW00/hw_garage')
+lib.versionCheck('https://github.com/Lunar-Scripts/hw_garage')
 
 Utils = {}
 local resourceName = GetCurrentResourceName()
@@ -34,7 +34,7 @@ function Utils.logToDiscord(source, xPlayer, message)
             ["description"] = message,
             ["footer"] = {
                 ["text"] = os.date('%H:%M - %d. %m. %Y', os.time()),
-                ["icon_url"] = '',
+                ["icon_url"] = 'https://cdn.discordapp.com/attachments/793081015433560075/1048643072952647700/lunar.png',
             },
         }
     }
@@ -61,4 +61,3 @@ function Utils.createVehicle(model, coords, type)
 
     return vehicle
 end
-

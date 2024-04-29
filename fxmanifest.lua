@@ -1,11 +1,10 @@
--- Resource Metadata
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
 author 'HenkW'
-description 'Advanced Garage system for ESX & QBCORE'
-version '1.1.0'
+description 'Advanced garage system using OX. (ESX / QBCORE)'
+version '1.5.0'
 
 files {
     'locales/*.json'
@@ -29,7 +28,5 @@ server_scripts {
     'utils/sv_main.lua',
     'config/sv_config.lua',
     'locales/*.lua',
-    'server/*.lua',
-    'server/version.lua'
+    'server/*.lua'
 }
-server_scripts { '@mysql-async/lib/MySQL.lua' }

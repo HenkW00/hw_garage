@@ -1,14 +1,14 @@
 Config = {}
 Config.MaxDistance = 10.0 -- Max interact distance
-Config.UseKeySystem = false -- Implemented only for qb-vehiclekeys, you can implement it for other systems in cl_edit.lua
+Config.UseKeySystem = true -- Implemented only for qb-vehiclekeys, you can implement it for other systems in cl_edit.lua
 Config.SpawnpointCheck = false -- Checks if the vehicle spawnpoint is empty before spawning it.
-Config.checkForUpdates = true -- Recommended to leave on "true"
-Config.Debug = true -- Comming soon..............
+Config.checkForUpdates = true
+Config.Debug = true
+Config.Logs = true
 
 -- The global setting for target however you can still combine target/TextUI by omitting Position or PedPosition in garage/impound data
 Config.Target = false
 
--- DONT EDIT BELOW UNLESS U KNOW WHAT U ARE DOING!!!!!
 ---@alias VehicleType string
 
 ---@class BlipData
@@ -18,20 +18,19 @@ Config.Target = false
 ---@field Color integer
 
 ---@type table<VehicleType, table<'Garage' | 'Impound', BlipData>>
-
 Config.Blips = {
     ['car'] = {
         Garage = {
             Name = 'Garage',
             Sprite = 357,
             Size = 0.5,
-            Color = 17
+            Color = 3
         },
         Impound = {
             Name = 'Impound',
             Sprite = 357,
             Size = 0.5,
-            Color = 3
+            Color = 17
         },
     },
     ['air'] = {
@@ -39,13 +38,13 @@ Config.Blips = {
             Name = 'Air Garage',
             Sprite = 357,
             Size = 0.5,
-            Color = 17
+            Color = 3
         },
         Impound = {
             Name = 'Air Impound',
             Sprite = 357,
             Size = 0.5,
-            Color = 3
+            Color = 17
         },
     },
     ['boat'] = {
@@ -53,18 +52,17 @@ Config.Blips = {
             Name = 'Boat Garage',
             Sprite = 357,
             Size = 0.5,
-            Color = 17
+            Color = 3
         },
         Impound = {
             Name = 'Boat Impound',
             Sprite = 357,
             Size = 0.5,
-            Color = 3
+            Color = 17
         },
     },
 }
 
--- DONT EDIT BELOW UNLESS U KNOW WHAT U ARE DOING!!!!!
 ---@class LocationData
 ---@field Visible boolean Blip visibility on map.
 ---@field Type VehicleType The vehicle type.
@@ -78,7 +76,6 @@ Config.Blips = {
 ---@field Interior string? The interior name.
 
 ---@type GarageData[]
-
 
 Config.Garages = {
     {
@@ -303,11 +300,9 @@ Config.GarageInteriors = {
 
 Config.ImpoundPrice = 1000 --Price to return your vehicle.
 
--- DONT EDIT BELOW UNLESS U KNOW WHAT U ARE DOING!!!!!
 ---@class ImpoundData : LocationData
 
 ---@type ImpoundData[]
-
 Config.Impounds = {
     {
         Visible = true,

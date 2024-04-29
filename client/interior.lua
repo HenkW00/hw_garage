@@ -1,6 +1,3 @@
--- This part of the script could've been written much better, if you have the time to do so, create a PR.
--- TODO: Refactor
-
 local busy, currentIndex, point, entities, lastCoords = false, nil, nil, {}, nil
 
 local function chooseVehicle(index)
